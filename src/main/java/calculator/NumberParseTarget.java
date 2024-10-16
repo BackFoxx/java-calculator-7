@@ -1,5 +1,6 @@
 package calculator;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public record NumberParseTarget(
@@ -7,6 +8,11 @@ public record NumberParseTarget(
         List<String> results,
         boolean finished
 ) {
+
+    public static NumberParseTarget createDefault(String input) {
+        return new NumberParseTarget(input, new ArrayList<>(), false);
+    }
+
     public boolean isFirstDividing() {
         return results.isEmpty();
     }
