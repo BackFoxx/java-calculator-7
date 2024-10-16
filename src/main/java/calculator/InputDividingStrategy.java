@@ -1,5 +1,7 @@
 package calculator;
 
+import calculator.domain.NumberParseTarget;
+
 import java.util.List;
 
 public interface InputDividingStrategy {

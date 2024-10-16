@@ -1,7 +1,7 @@
 package calculator.dividingstrategy;
 
 import calculator.InputDividingStrategy;
-import calculator.NumberParseTarget;
+import calculator.domain.NumberParseTarget;
 
 import java.util.ArrayList;
 import java.util.Arrays;

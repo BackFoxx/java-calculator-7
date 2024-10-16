@@ -1,6 +1,7 @@
 package calculator.application;
 
 import calculator.*;
+import calculator.domain.NumberParseTarget;
 
 import java.util.List;
 
