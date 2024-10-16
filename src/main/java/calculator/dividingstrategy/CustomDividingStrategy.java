@@ -8,12 +8,12 @@ import java.util.Arrays;
 
 public class CustomDividingStrategy implements InputDividingStrategy {
     @Override
-    public NumberParseTarget parse(NumberParseTarget target) {
+    public NumberParseTarget divide(NumberParseTarget target) {
         if (!(target.origin().startsWith("//") && target.origin().contains("\\n"))) {
             return target;
         }
         var separator = String.valueOf(target.origin().charAt(2));
-        var origin = target.origin().substring(5, target.origin().length());
+        var origin = target.origin().substring(5);
 
         if (target.isFirstDividing()) {
             var dividedInput = Arrays.stream(origin.split(separator)).toList();

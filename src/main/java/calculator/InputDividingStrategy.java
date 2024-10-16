@@ -3,7 +3,7 @@ package calculator;
 import java.util.List;
 
 public interface InputDividingStrategy {
-    NumberParseTarget parse(NumberParseTarget target);
+    NumberParseTarget divide(NumberParseTarget target);
 
     default boolean isFinished(List<String> targets) {
         return targets.stream().allMatch(this::isNumber);

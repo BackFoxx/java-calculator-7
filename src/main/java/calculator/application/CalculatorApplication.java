@@ -30,7 +30,7 @@ public class CalculatorApplication {
         var target = NumberParseTarget.createDefault(input);
         for (InputDividingStrategy strategy : inputDividingStrategies) {
             if (!target.finished()) {
-                target = strategy.parse(target);
+                target = strategy.divide(target);
             }
         }
 

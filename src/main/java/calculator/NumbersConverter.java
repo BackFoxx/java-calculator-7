@@ -1,7 +1,9 @@
 package calculator;
 
+import calculator.domain.Number;
+
 import java.util.List;
 
 public interface NumbersConverter {
-    List<Integer> convert(List<String> target);
+    List<Number> convert(List<String> target);
 }

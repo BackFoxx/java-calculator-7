@@ -11,7 +11,7 @@ public class ColonDividingStrategy implements InputDividingStrategy {
     public static final String COLON = ":";
 
     @Override
-    public NumberParseTarget parse(NumberParseTarget target) {
+    public NumberParseTarget divide(NumberParseTarget target) {
         if (target.isFirstDividing()) {
             var dividedInput = Arrays.stream(target.origin().split(COLON)).toList();
             return new NumberParseTarget(target.origin(), dividedInput, isFinished(dividedInput));

@@ -1,15 +1,15 @@
 package calculator.calculator;
 
 import calculator.NumberCalculator;
+import calculator.domain.Number;
 
 import java.util.List;
 
 public class SumCalculator implements NumberCalculator {
     @Override
-    public Long calculate(List<Integer> targets) {
+    public Number calculate(List<Number> targets) {
         return targets.stream()
-                .map(Long::valueOf)
-                .reduce(Long::sum)
-                .orElse(0L);
+                .reduce(Number::sum)
+                .orElse(Number.from(0));
     }
 }

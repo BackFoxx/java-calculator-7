@@ -11,7 +11,7 @@ public class RestDividingStrategy implements InputDividingStrategy {
     public static final String REST = ",";
 
     @Override
-    public NumberParseTarget parse(NumberParseTarget target) {
+    public NumberParseTarget divide(NumberParseTarget target) {
         if (target.isFirstDividing()) {
             var dividedInput = Arrays.stream(target.origin().split(REST)).toList();
             return new NumberParseTarget(target.origin(), dividedInput, isFinished(dividedInput));

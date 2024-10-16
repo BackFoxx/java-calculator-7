@@ -1,7 +1,9 @@
 package calculator;
 
+import calculator.domain.Number;
+
 import java.util.List;
 
 public interface NumberCalculator {
-    Long calculate(List<Integer> targets);
+    Number calculate(List<Number> targets);
 }
