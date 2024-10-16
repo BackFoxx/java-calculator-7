@@ -6,19 +6,19 @@ import java.util.List;
 
 public class CalculatorApplication {
     private final Reader reader;
+    private final List<InputValidator> inputValidators;
+    private final List<InputDividingStrategy> inputDividingStrategies;
+    private final NumbersConverter converter;
     private final NumberCalculator numberCalculator;
     private final Printer printer;
-    private final NumbersConverter converter;
-    private final List<InputDividingStrategy> inputDividingStrategies;
-    private final List<InputValidator> inputValidators;
 
-    public CalculatorApplication(Reader reader, NumberCalculator numberCalculator, Printer printer, NumbersConverter converter, List<InputDividingStrategy> inputDividingStrategies, List<InputValidator> inputValidators) {
-        this.reader = reader;
-        this.numberCalculator = numberCalculator;
-        this.printer = printer;
-        this.converter = converter;
-        this.inputDividingStrategies = inputDividingStrategies;
-        this.inputValidators = inputValidators;
+    public CalculatorApplication(Configuration configuration) {
+        this.reader = configuration.reader();
+        this.inputValidators = configuration.inputValidators();
+        this.inputDividingStrategies = configuration.inputDividingStrategies();
+        this.converter = configuration.numbersConverter();
+        this.numberCalculator = configuration.numberCalculator();
+        this.printer = configuration.printer();
     }
 
     public void run() {
